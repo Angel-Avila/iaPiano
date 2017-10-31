@@ -25,10 +25,17 @@ def insertToList(key, startTime, endTime):
         notes_list.append([lastTime, ""])
         lastTime += 4
 
-    while(lastTime <= endTime):                          # add the note at the times it should be played
-        notes_list[len(notes_list) - 1][1] += key
-        notes_list.append([lastTime, ""])
-        lastTime += 4
+    endIndex = endTime/4
+
+    while((insertIndex * 4)< endTime):                          # add the note at the times it should be played
+        notes_list[int(insertIndex)][1] += key
+
+        insertIndex += 1
+
+        if len(notes_list) <= endIndex:
+            notes_list.append([int(insertIndex * 4), ""])
+
+
 
 path = "/Users/Angel/Documents/Iteso/7moSemestre/AI/CSVfiles/" # Angel path
 
