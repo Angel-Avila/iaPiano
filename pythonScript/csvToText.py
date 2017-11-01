@@ -37,15 +37,17 @@ def insertToList(key, startTime, endTime):
 
 
 
-path = "/Users/Angel/Documents/Iteso/7moSemestre/AI/CSVfiles/" # Angel path
+base_path = os.path.dirname(__file__)                   # Base path where code is executed
+folder_path = os.path.abspath(os.path.join(basepath, "..", "CSVfiles/")) + "/" # Path where all csv files are
 
 notes_list = [[0, ""]]
 notes_helper_dict = {'a': 0}                            # helps us get start and end index for a note
 
-for fileName in os.listdir(path):
+for fileName in os.listdir(folder_path):
     if fileName.endswith("test.csv"):
 
-        reader = csv.reader(open(path + fileName, encoding='latin-1'),
+        print(filepath)
+        reader = csv.reader(open(folder_path + fileName, encoding='latin-1'),
                             delimiter=',', quotechar='"', skipinitialspace=True)
         for row in reader:
             if(row[2] == "Note_on_c"):
