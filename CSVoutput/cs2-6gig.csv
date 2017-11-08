@@ -1,0 +1,61 @@
+0, 0, Header, 1, 1, 480
+1, 0, Start_track
+1, 0, Title_t, "Test"
+1, 0, Tempo, 500000
+1, 0, Instrument_name_t, "Church Organ"
+1, 480, Note_on_c, 1, 57, 127
+1, 720, Note_off_c, 1, 57, 0
+1, 720, Note_on_c, 1, 50, 127
+1, 1200, Note_off_c, 1, 50, 0
+1, 1200, Note_on_c, 1, 58, 127
+1, 1440, Note_off_c, 1, 58, 0
+1, 1440, Note_on_c, 1, 49, 127
+1, 1920, Note_off_c, 1, 49, 0
+1, 1920, Note_on_c, 1, 55, 127
+1, 2160, Note_off_c, 1, 55, 0
+1, 2160, Note_on_c, 1, 53, 127
+1, 2280, Note_off_c, 1, 53, 0
+1, 2280, Note_on_c, 1, 52, 127
+1, 2400, Note_off_c, 1, 52, 0
+1, 3360, Note_on_c, 1, 62, 127
+1, 3600, Note_off_c, 1, 62, 0
+1, 4320, Note_on_c, 1, 48, 127
+1, 4440, Note_off_c, 1, 48, 0
+1, 4800, Note_on_c, 1, 60, 127
+1, 5040, Note_off_c, 1, 60, 0
+1, 6480, Note_on_c, 1, 47, 127
+1, 6720, Note_off_c, 1, 47, 0
+1, 7680, Note_on_c, 1, 46, 127
+1, 7800, Note_off_c, 1, 46, 0
+1, 7800, Note_on_c, 1, 45, 127
+1, 7920, Note_off_c, 1, 45, 0
+1, 7920, Note_on_c, 1, 43, 127
+1, 8160, Note_off_c, 1, 43, 0
+1, 8160, Note_on_c, 1, 51, 127
+1, 8400, Note_off_c, 1, 51, 0
+1, 9240, Note_on_c, 1, 41, 127
+1, 9360, Note_off_c, 1, 41, 0
+1, 9360, Note_on_c, 1, 40, 127
+1, 9600, Note_off_c, 1, 40, 0
+1, 12480, Note_on_c, 1, 63, 127
+1, 12600, Note_off_c, 1, 63, 0
+1, 15120, Note_on_c, 1, 59, 127
+1, 15240, Note_off_c, 1, 59, 0
+1, 15960, Note_on_c, 1, 64, 127
+1, 16080, Note_off_c, 1, 64, 0
+1, 16080, Note_on_c, 1, 65, 127
+1, 16200, Note_off_c, 1, 65, 0
+1, 17760, Note_on_c, 1, 56, 127
+1, 18000, Note_off_c, 1, 56, 0
+1, 21600, Note_on_c, 1, 36, 127
+1, 21720, Note_off_c, 1, 36, 0
+1, 52560, Note_on_c, 1, 54, 127
+1, 52680, Note_off_c, 1, 54, 0
+1, 54000, Note_on_c, 1, 42, 127
+1, 54120, Note_off_c, 1, 42, 0
+1, 65160, Note_on_c, 1, 61, 127
+1, 65280, Note_off_c, 1, 61, 0
+1, 72000, Note_on_c, 1, 38, 127
+1, 72120, Note_off_c, 1, 38, 0
+1, 72120, End_track
+0, 0, End_of_file
