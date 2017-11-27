@@ -57,7 +57,6 @@ for fileName in os.listdir(folder_path):
                     startTime = notes_helper_dict[key]
                     insertToList(key, int(startTime), int(time))
 
-
         for timeNote in notes_list:
             textFile.write(timeNote[1] + ' ')
 
