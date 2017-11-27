@@ -6,6 +6,8 @@ def getInt(ascii):
     val = ord(ascii)
     if (val > 160):
         val -= 161
+    if (val > 127):
+        val -= 127
     return val
 
 def getNextNote(songString, index, accountedNotes, startTime):
@@ -54,7 +56,7 @@ def getNoteEndTime(songString, index, startTime):
 
 
 base_path = os.path.dirname(__file__)                                               # Base path where code is executed
-folder_path = os.path.abspath(os.path.join(base_path, "..", "textInput/")) + "/"    # Path where all text files are
+folder_path = os.path.abspath(os.path.join(base_path, "..", "aiOutput/")) + "/"    # Path where all text files are
 
 for fileName in os.listdir(folder_path):
     if fileName.endswith(".txt"):
@@ -64,8 +66,7 @@ for fileName in os.listdir(folder_path):
         csvFile.write("0, 0, Header, 1, 1, 480\n" +
                       "1, 0, Start_track\n" +
                       "1, 0, Title_t, \"Test\"\n" +
-                      "1, 0, Tempo, 500000\n" +
-                      "1, 0, Instrument_name_t, \"Church Organ\"\n")
+                      "1, 0, Tempo, 500000\n")
 
         songString = textFile.read()
         accountedNotes = []
@@ -85,7 +86,7 @@ for fileName in os.listdir(folder_path):
             accountedNotes.append(nextNote)
             endTime = getNoteEndTime(songString, i, startTime)
 
-            toWrite.append(("1, ", startTime, ", Note_on_c, 1, " + str(getInt(nextNote)) + ", 127\n"))
+            toWrite.append(("1, ", startTime, ", Note_on_c, 1, " + str(getInt(nextNote)) + ", 64\n"))
             toWrite.append(("1, ", endTime, ", Note_off_c, 1, " + str(getInt(nextNote)) + ", 0\n"))
 
         sortedList = sorted(toWrite, key=lambda eventTime: eventTime[1])

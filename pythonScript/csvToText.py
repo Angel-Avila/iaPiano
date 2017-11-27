@@ -34,6 +34,7 @@ def insertToList(key, startTime, endTime):
 base_path = os.path.dirname(__file__)                                           # Base path where code is executed
 folder_path = os.path.abspath(os.path.join(base_path, "..", "CSVfiles/")) + "/" # Path where all csv files are
 
+textFile = open("../aiOutput/turingInput.txt", 'a', encoding='latin-1')
 
 for fileName in os.listdir(folder_path):
     if fileName.endswith(".csv"):
@@ -56,10 +57,10 @@ for fileName in os.listdir(folder_path):
                     startTime = notes_helper_dict[key]
                     insertToList(key, int(startTime), int(time))
 
-        textFile = open("../textInput/" + fileName.split('.')[0] + '.txt', 'w', encoding='latin-1')
-
 
         for timeNote in notes_list:
             textFile.write(timeNote[1] + ' ')
 
-        textFile.close()
+        textFile.write(' ')
+
+textFile.close()
